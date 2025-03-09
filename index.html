@@ -1,51 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradingView Widget</title>
-    <style>
-        body {
-            background: transparent !important;
-            margin: 0;
-        }
-        .tradingview-widget-container {
-            background: transparent !important;
-        }
-    </style>
-</head>
-<body>
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-        {
-        "symbols": [
-            {
-                "description": "",
-                "proName": "BINANCE:BTCUSDT"
-            },
-            {
-                "description": "",
-                "proName": "BINANCE:ETHUSDT"
-            },
-            {
-                "description": "",
-                "proName": "BINANCE:XRPUSDT"
-            },
-            {
-                "description": "",
-                "proName": "BINANCE:ADAUSDT"
-            }
-        ],
-        "showSymbolLogo": true,
-        "isTransparent": true,
-        "displayMode": "adaptive",
-        "colorTheme": "light",
-        "locale": "en"
-        }
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
-</body>
-</html>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="background: transparent !important;">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+    "symbols": [
+      {
+        "description": "",
+        "proName": "BINANCE:BTCUSDT"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:ETHUSDT"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:XRPUSDT"
+      },
+      {
+        "description": "",
+        "proName": "BINANCE:ADAUSDT"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": true,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  }
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+<style>
+  /* Общий стиль для виджета */
+  iframe {
+    background: transparent !important;
+  }
+  .apption-embed-wrapper {
+    background: transparent !important;
+  }
+  .tradingview-widget-container {
+    background: transparent !important;
+  }
+
+  /* Темная тема */
+  @media (prefers-color-scheme: dark) {
+    .tradingview-widget-container .tv-widget-ticker__item {
+      color: white !important; /* Белый текст в темной теме */
+    }
+  }
+
+  /* Светлая тема */
+  @media (prefers-color-scheme: light) {
+    .tradingview-widget-container .tv-widget-ticker__item {
+      color: black !important; /* Черный текст в светлой теме */
+    }
+  }
+</style>
