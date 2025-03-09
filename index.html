@@ -45,14 +45,16 @@
 
   /* Темная тема */
   @media (prefers-color-scheme: dark) {
-    .tradingview-widget-container .tv-widget-ticker__item {
+    .tradingview-widget-container .tv-widget-ticker__item,
+    .tradingview-widget-container .tv-widget-ticker__item .tv-widget-ticker__price {
       color: white !important; /* Белый текст в темной теме */
     }
   }
 
   /* Светлая тема */
   @media (prefers-color-scheme: light) {
-    .tradingview-widget-container .tv-widget-ticker__item {
+    .tradingview-widget-container .tv-widget-ticker__item,
+    .tradingview-widget-container .tv-widget-ticker__item .tv-widget-ticker__price {
       color: black !important; /* Черный текст в светлой теме */
     }
   }
